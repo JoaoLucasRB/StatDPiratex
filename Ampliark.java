@@ -14,18 +14,35 @@ public class Ampliark {
     
     public float calcLargura(){
         float resultado = (this.amplitude/this.ka);
-       return resultado;
+        this.setLargura(resultado);
     }
     
    public float calcAmplitude(){
        float resultado = num.getNumeros(num.getQtdNum())-num.getNumeros(0);
-       return resultado;
+       this.setAmplitude(resultado);
    }
    
    public double calcKa(){
        double resultado = 1 + 3.33 * Math.log10(num.getQtdNum());
-       return resultado;
+       this.setKa(resultado);
    }
    
-  
+   public void setAmplitude(float numero){
+       this.amplitude = numero;
+   }
+   public void setLargura(float numero){
+       this.largura = numero;
+   }
+   public void setKa(float numero){
+       this.ka = numero;
+   }
+    
+   public float getAmplitude(){
+       return this.amplitude;
+   }
+   public float getLargura(){
+       return this.largura;
+   }
+   public float getKa(){
+       return this.kar;
 }
