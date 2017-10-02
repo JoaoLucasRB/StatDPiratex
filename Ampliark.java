@@ -1,5 +1,5 @@
 
-package projeto;
+package principal;
 
 public class Ampliark {
     
@@ -12,18 +12,18 @@ public class Ampliark {
         this.num = num;
     }
     
-    public float calcLargura(){
+    public void calcLargura(){
         float resultado = (this.amplitude/this.ka);
         this.setLargura(resultado);
     }
     
-   public float calcAmplitude(){
-       float resultado = num.getNumeros(num.getQtdNum())-num.getNumeros(0);
+   public void calcAmplitude(){
+       float resultado = num.getNumeros(num.getQtdNum()-1)-num.getNumeros(0);
        this.setAmplitude(resultado);
    }
    
-   public double calcKa(){
-       double resultado = 1 + 3.33 * Math.log10(num.getQtdNum());
+   public void calcKa(){
+       float resultado = (float) (1 + 3.33 * Math.log10(num.getQtdNum()));
        this.setKa(resultado);
    }
    
@@ -44,5 +44,6 @@ public class Ampliark {
        return this.largura;
    }
    public float getKa(){
-       return this.kar;
+       return this.ka;
+   }
 }
