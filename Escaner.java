@@ -1,46 +1,49 @@
 
 package principal;
 
-import java.util.Arrays;
-import java.util.Scanner;
-
-public class Escaner {
-    private int qtdNum;
-    private Float[] numeros;
-    Scanner teclado = new Scanner(System.in);
+public class Ampliark {
     
-    public Escaner(){
-        System.out.println("Diga a quantidade de numeros: ");
-        this.qtdNum = teclado.nextInt();
-        this.numeros = new Float[this.qtdNum];
-    }
-    public void lerNumeros(){
-        System.out.println("Diga os numeros agora: ");
-        for(int x=0; x < this.numeros.length; x++){
-            this.numeros[x] = teclado.nextFloat();
-
-        }
-        Arrays.sort(this.numeros);
+    private Escaner num;
+    private float amplitude;
+    private float ka;
+    private float largura;
+    
+    public Ampliark (Escaner num){
+        this.num = num;
     }
     
- 
-        
-
-    public float getNumeros(int posic) {
-        return this.numeros[posic];
-    }
-
-    public void setNumeros(Float[] numeros) {
-        this.numeros = numeros;
-    }
-
-    public int getQtdNum() {
-        return this.qtdNum;
-    }
-
-    public void setQtdNum(int qtdNum) {
-        this.qtdNum = qtdNum;
+    public void calcLargura(){
+        float resultado = (this.amplitude/this.ka);
+        this.setLargura(resultado);
     }
     
-
+   public void calcAmplitude(){
+       float resultado = num.getNumeros(num.getQtdNum()-1)-num.getNumeros(0);
+       this.setAmplitude(resultado);
+   }
+   
+   public void calcKa(){
+       float resultado = (float) (1 + 3.33 * Math.log10(num.getQtdNum()));
+       this.setKa((float) Math.ceil(resultado));
+   }
+   
+   public void setAmplitude(float numero){
+       this.amplitude = numero;
+   }
+   public void setLargura(float numero){
+       this.largura = numero;
+   }
+   public void setKa(float numero){
+       this.ka = numero;
+   }
+    
+   public float getAmplitude(){
+       return this.amplitude;
+   }
+   public float getLargura(){
+       return this.largura;
+   }
+   public float getKa(){
+       return this.ka;
+   }
 }
