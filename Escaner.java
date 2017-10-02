@@ -1,5 +1,5 @@
 
-package projeto;
+package principal;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -26,8 +26,8 @@ public class Escaner {
  
         
 
-    public Float getNumeros(int posic) {
-        return numeros[posic];
+    public float getNumeros(int posic) {
+        return this.numeros[posic];
     }
 
     public void setNumeros(Float[] numeros) {
@@ -35,7 +35,7 @@ public class Escaner {
     }
 
     public int getQtdNum() {
-        return qtdNum;
+        return this.qtdNum;
     }
 
     public void setQtdNum(int qtdNum) {
