@@ -15,6 +15,8 @@ public class Ampliark {
     public void calcLargura(){
         float resultado = (this.amplitude/this.ka);
         this.setLargura(resultado);
+        this.setKa((float) Math.ceil(this.getKa()));
+        
     }
     
    public void calcAmplitude(){
