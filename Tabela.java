@@ -13,7 +13,7 @@ public class Tabela {
     public void absolutaEPm(){
         for (int c=0; c<amp.getKa(); c++){
             float limite = num.getNumeros(n) + amp.getLargura();
-            min[c] = num.numeros[n];
+            min[c] = num.getNumeros[n];
             for(n=n; n<num.getQtdNum(); n++){
                 if(num.getNumeros(n) < limite){
                     freqA[c]++;
