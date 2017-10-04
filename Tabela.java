@@ -25,4 +25,34 @@ public class Tabela {
         }
     }
     
+    public void relativaEPercentual(){
+        for(int c=0; c<amp.getKa(); c++){
+            freqR[c] = freqA[c]/(float)num.getQtdNum();
+            freqP[c] = freqR[c]*100;
+        }
+    }
+    
+    public float getMin(int posic){
+        return this.min[posic];
+    }
+    
+    public float getPontoMedio(int posic){
+        return this.pontoMedio[posic];
+    }
+    
+    public float getMax(int posic){
+        return this.max[posic];
+    }
+    
+    public int getFreqA(int posic){
+        return this.freqA[posic];
+    }
+    
+    public float getFreqR(int posic){
+        return this.freqR[posic];
+    }
+    
+    public float getFreqP(int posic){
+        return this.freqP[posic];
+    }
 }
