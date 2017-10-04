@@ -25,4 +25,11 @@ public class Tabela {
         }
     }
     
+    public void relativaEPercentual(){
+        for(int c=0; c<amp.getKa(); c++){
+            freqR[c] = freqA[c]/(float)num.getQtdNum();
+            freqP[c] = freqR[c]*100;
+        }
+    }
+    
 }
